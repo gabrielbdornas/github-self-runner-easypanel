@@ -1,5 +1,5 @@
 #!/bin/bash
-set -eux
+set -eu
 
 RUNNER_VERSION="${RUNNER_VERSION:-2.334.0}"
 RUNNER_DIR="${RUNNER_DIR:-/home/runner/actions-runner}"

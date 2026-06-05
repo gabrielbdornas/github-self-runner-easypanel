@@ -1,5 +1,5 @@
 #!/bin/bash
-set -eux
+set -eu
 
 RUNNER_DIR="${RUNNER_DIR:-/home/runner/actions-runner}"
 RUNNER_USER="${RUNNER_USER:-runner}"
