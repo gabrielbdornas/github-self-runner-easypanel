@@ -60,14 +60,18 @@ cd "$RUNNER_DIR"
 echo "Checking GitHub runner registration..."
 
 if [ ! -f ".runner" ]; then
-  su "$RUNNER_USER" -c './config.sh
-  --url "'"$REPO_URL"'"
-  --token "'"$REGISTRATION_TOKEN"'"
-  --name "'"$RUNNER_NAME"'"
-  --labels "'"$RUNNER_LABELS"'"
-  --unattended
-  --replace
-  --disableupdate'
+
+  su "$RUNNER_USER" -c "
+    ./config.sh \
+      --url '$REPO_URL' \
+      --token '$REGISTRATION_TOKEN' \
+      --name '$RUNNER_NAME' \
+      --labels '$RUNNER_LABELS' \
+      --unattended \
+      --replace \
+      --disableupdate
+  "
+
 else
   echo "Runner is already registered."
 fi
