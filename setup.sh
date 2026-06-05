@@ -63,7 +63,7 @@ if [ ! -f ".runner" ]; then
 
   su "$RUNNER_USER" -c "
     ./config.sh \
-      --url '$REPO_URL' \
+      --url '$URL' \
       --token '$REGISTRATION_TOKEN' \
       --name '$RUNNER_NAME' \
       --labels '$RUNNER_LABELS' \
