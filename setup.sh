@@ -44,8 +44,7 @@ mkdir -p "$RUNNER_DIR"
 if [ ! -f "$RUNNER_DIR/config.sh" ]; then
   echo "Installing GitHub Actions Runner v${RUNNER_VERSION}..."
 
-  curl -o /tmp/actions-runner-linux-x64.tar.gz -L
-  "https://github.com/actions/runner/releases/download/v${RUNNER_VERSION}/actions-runner-linux-x64-${RUNNER_VERSION}.tar.gz"
+  curl -o /tmp/actions-runner-linux-x64.tar.gz -L "https://github.com/actions/runner/releases/download/v${RUNNER_VERSION}/actions-runner-linux-x64-${RUNNER_VERSION}.tar.gz"
 
   tar xzf /tmp/actions-runner-linux-x64.tar.gz -C "$RUNNER_DIR"
 
